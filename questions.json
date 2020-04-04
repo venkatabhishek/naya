@@ -1,0 +1,38 @@
+{
+    "designer": [
+        {
+            "category": "Capacity",
+            "question": "How much time can you spend on Naya projects per week?",
+            "type": "Number"
+        },
+        {
+            "category": "Type of Designer",
+            "question": "Which of the following best decribes you?",
+            "type": "Option",
+            "values": ["Furniture Designer", "Architect", "Interior Designer", "Industrial Designer", "Designer", "Maker", "Other"]
+        },
+        {
+            "category": "Training",
+            "question": "What is your education/professional level?",
+            "type": "Text"
+        }
+    ],
+    "maker": [
+        {
+            "category": "capacity",
+            "question": "How many projects on average do you work on every month?",
+            "type": "Number"
+        },
+        {
+            "category": "Material",
+            "question": "What kind of materials can you work with?",
+            "type": "Option",
+            "values": ["Wood", "Metal", "Glass", "Plastic", "Concrete", "Other"]
+        },
+        {
+            "category": "Location",
+            "question": "Where are you based out of?",
+            "type": "Text"
+        }
+    ]
+}

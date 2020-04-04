@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+
+.answer-l{
+    font-weight: 400;
+}
+
+.onboard{
+    width: 70%;
+    margin: auto;
+}
