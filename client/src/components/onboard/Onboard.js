@@ -28,6 +28,7 @@ class Onboard extends Component {
   componentDidMount() {
     let _this = this;
     getQuestions().then(raw => {
+      console.log(raw.data);
       _this.setState({
         raw: raw.data
       }, () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     withRouter
 } from 'react-router-dom'
@@ -7,9 +7,11 @@ const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    if (props.isAuthenticated) {
-        props.history.push("/app")
-    }
+    useEffect(() => {
+        if (props.isAuthenticated) {
+            props.history.push("/app")
+        }
+    })
 
     let onSubmit = (event) => {
         event.preventDefault();
@@ -18,6 +20,10 @@ const Login = (props) => {
         });
 
     }
+
+    let navigate = () => {
+        props.history.push("/register")
+      }
 
     return (
         <div className="row wrapper center">
@@ -44,12 +50,12 @@ const Login = (props) => {
                         />
                     </div>
                     <button type="submit" className="btn-block">Get Started</button>
-                    {props.authError ? <h6 style={{ color: "red" }}>props.authError</h6> : null}
+                    {props.authError ? <h4 style={{ color: "red" }}>{props.authError}</h4> : null}
                 </form>
             </div>
             <div className="col">
                 <h1>Login</h1>
-                <h3>Don't have an account? <a href="/">Register</a></h3>
+                <h3>Don't have an account? <a onClick={navigate}>Register</a></h3>
             </div>
 
 

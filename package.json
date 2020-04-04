@@ -4,10 +4,14 @@
   "description": "Naya studio onboarding app",
   "main": "index.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "server": "nodemon index.js --ignore './client/'",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node index.js"
+    "start": "node index.js",
+    "clean": "rm -r client/build",
+    "build": "npm run build --prefix client",
+    "heroku-prebuild": "npm run clean"
   },
   "keywords": [],
   "author": "",

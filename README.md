@@ -27,3 +27,18 @@ Frontend - React bootstrapped with Create React App
 
 Deployment - Heroku
 
+# Local development
+
+Clone repo
+
+`git clone https://github.com/venkatabhishek/naya.git`
+
+Install deps
+
+`npm run client-install && npm install`
+
+Run development servers
+
+`npm run dev`
+
+(NOTE: This will run React app on port 3000, and server on port 4000; react app uses proxy in development)

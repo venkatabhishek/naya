@@ -10,8 +10,7 @@ export const registerUser = (credentials) => {
                 let decoded = jwtDecode(token);
                 res(decoded)
             }).catch((err) => {
-                console.log(err);
-                rej(err)
+                rej(err.response.data)
             })
     })
 }
@@ -26,7 +25,7 @@ export const loginUser = credentials => {
                 let decoded = jwtDecode(token);
                 res(decoded)
             }).catch((err) => {
-                rej(err)
+                rej(err.response.data)
             })
     })
 

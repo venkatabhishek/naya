@@ -15,11 +15,15 @@ const Register = (props) => {
 
   }
 
+  let navigate = () => {
+    props.history.push("/login")
+  }
+
   return (
     <div className="row wrapper center">
       <div className="col">
         <h1>Register</h1>
-        <h3>Already have an account? <a href="/login">Login</a></h3>
+        <h3>Already have an account? <a onClick={navigate}>Login</a></h3>
       </div>
       <div className="col">
         <form onSubmit={onSubmit} className="vform">
@@ -44,7 +48,7 @@ const Register = (props) => {
             />
           </div>
           <button type="submit" className="btn-block">Get Started</button>
-          {props.authError ? <h6 style={{ color: "red" }}>props.authError</h6> : null}
+          {props.authError ? <h4 style={{ color: "red" }}>{props.authError}</h4> : null}
         </form>
       </div>
 
