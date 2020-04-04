@@ -124,9 +124,10 @@ class Onboard extends Component {
     return (
       <div>
 
-        <div className="progress">
-
-        </div>
+        {questions.length !== 1 ? (<div className="progress">
+          <div className="progress-content" style={{width: `${((position+1)/questions.length)*100}%`}}>
+            </div>
+        </div>) : null}
 
 
         <div className="header">

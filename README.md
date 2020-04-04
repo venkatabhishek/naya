@@ -4,7 +4,7 @@ Full-stack Signup and Onboarding Web app
 
 # General Flow
 
-The application contains a basic authentication system that utilizes encryption (bcrypt) and json-web-tokens. Users start by registering for an account (which consists of just an email and password). Upon registering, users are immediatly launched into the onboarding process which is just a series of questions. These questions are defined in `questions.json`, where each key represents a role, and the value is an array of questions associated with that role. Selecting multiple roles will present the questions for each role to the user. The user is then redirected to a home page where they can view the results of their session. At any time, the user can also simply login to their account which also redirects them to the home page. The user can redo/start the onboarding questions from the home page as well.
+The application contains a basic authentication system that utilizes encryption (bcrypt), json-web-tokens, and localStorage persistance. Users start by registering for an account (which consists of just an email and password). Upon registering, users are immediatly launched into the onboarding process which is just a series of questions. These questions are defined in `questions.json`, where each key represents a role, and the value is an array of questions associated with that role. Selecting multiple roles will present the questions for each role to the user. The user is then redirected to a home page where they can view the results of their session. At any time, the user can also simply login to their account which also redirects them to the home page. The user can redo/start the onboarding questions from the home page as well.
 
 # Directory Organization
 

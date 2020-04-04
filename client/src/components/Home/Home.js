@@ -42,7 +42,7 @@ class Home extends Component {
                         <div key={index}>
                             <h3 className="question-l">{q.question}</h3>
                             <h3 className="answer-l">
-                            {q.answer ? (q.answer instanceof Array ? q.answer.join(", ") : q.answer) : ""}
+                            {q.answer ? (q.answer instanceof Array ? q.answer.join(", ") : (q.answer)) : (<i>"Unanswered"</i>)}
                             </h3>
                         </div>
                     )))}
